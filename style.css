@@ -1,0 +1,116 @@
+/*
+ * █▀ ▀█▀ █▄█ █░░ █▀▀
+ * ▄█ ░█░ ░█░ █▄▄ ██▄
+ */
+
+@import "catppuccin-frappe.css";
+
+* {
+    font-size: 14px;
+    font-family: JetBrainsMono Nerd Font;
+    font-weight: bold;
+    min-height: 0;
+    border: none;
+    transition: none;
+    padding: 0;
+    margin: 0;
+    text-shadow: none;
+    box-shadow: none;
+    -gtk-icon-shadow: none;
+    -gtk-icon-effect: none;
+}
+
+#waybar {
+    color: @text;
+    background: @base;
+}
+
+#waybar.hidden {
+    background: transparent;
+}
+
+.module {
+    color: @text;
+    background: @base;
+    padding: 0px 4px 0px 4px;
+    transition: none;
+}
+
+tooltip {
+    color: @text;
+    background: @crust;
+    border-radius: 7px;
+    border: 2px solid @mauve;
+}
+
+tooltip label {
+    color: @text;
+    padding: 0px;
+    margin: 0px;
+    margin: 0px 7px 0px 7px;
+}
+
+#workspaces {
+}
+
+#workspaces button {
+    border-radius: 7px;
+    min-width: 100px;
+    color: @text;
+    background: @crust;
+    margin: 3px 3px 3px 3px;
+    padding: 0px 6px 0px 6px;
+}
+
+#workspaces button:hover {
+    color: @yellow;
+    background: @crust;
+}
+
+#workspaces button.active {
+    color: @yellow;
+    background: @surface1;
+}
+
+#workspaces button.active:hover {
+    color: @teal;
+    background: @surface1;
+}
+
+#tray {
+}
+
+#tray menu {
+    color: @text;
+    background: @crust;
+    border: 2px solid @mauve;
+    padding: 7px 2px 7px 2px;
+}
+
+#tray menuitem {
+}
+
+#tray menuitem:hover {
+    color: @yellow;
+    background: @crust;
+}
+
+#tray menuitem check {
+    color: @error;
+}
+
+#tray separator {
+    margin: 2px 7px 2px 7px;
+    min-height: 2px;
+    background-color: @overlay0;
+}
+
+#pulseaudio {
+}
+
+#pulseaudio.muted {
+    color: @red;
+}
+
+#custom-spacer {
+}
