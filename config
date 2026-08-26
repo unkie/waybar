@@ -15,7 +15,7 @@
 		"custom/spacer",
 		"pulseaudio",
 		"custom/separator",
-		"custom/media"
+		"custom/media",
 	],
 	"modules-center": [
 		"hyprland/workspaces"
@@ -25,19 +25,20 @@
 		"custom/separator",
 		"custom/kbdlayout",
 		"custom/separator",
+		"memory",
 		"clock#time",
 		"clock#date",
-		"custom/spacer"
+		"custom/spacer",
 	],
 
 	"hyprland/workspaces": {
 		"format": "{name}: <span font_size='120%'>{windows}</span> ",
-		//"format-muted": " <span font_size='210%' font_variant='smallcaps'>muted</span>",
 		"format-icons": {
 			"default": "",
 			"urgent": "",
-			"active": ""
+			"active": "",
 		},
+		"window-rewrite-default": "",
 		"window-rewrite": {
 			"title<.*youtube.*>": "",
 			"class<steam>": "󰓓",
@@ -59,7 +60,6 @@
 			"class<blender>": "",
 			"title<Windows>": "",
 		},
-		"window-rewrite-default": "",
 		"format-window-separator": " ",
 		"show-special": false,
 		"special-visible-only": false,
@@ -73,6 +73,7 @@
 		"disable-scroll": true,
 		"on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({workspace=\"e+1\"})' ",
 		"on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({workspace=\"e-1\"})' ",
+		"tooltip": false,
 	},
 	"clock#time": {
 		"interval": 60,
@@ -87,7 +88,7 @@
 		//"on-scroll-down": "...",
 		//"smooth-scrolling-threshold": ...,
 		"tooltip": false,
-		//"tooltip-format": "..."
+		//"tooltip-format": "...",
 	},
 	"clock#date": {
 		"interval": 60,
@@ -102,7 +103,7 @@
 		//"on-scroll-down": "...",
 		//"smooth-scrolling-threshold": ...,
 		"tooltip": false,
-		//"tooltip-format": "..."
+		//"tooltip-format": "...",
 	},
 	"pulseaudio": {
 		"format": "{icon}  {volume}%",
@@ -120,14 +121,14 @@
 			"default": ["", "", ""]
 		},
 		"on-click": "pactl set-sink-mute 0 toggle",
-		"on-click-right": "pavucontrol"
+		"on-click-right": "pavucontrol",
 
 	},
 	"custom/media": {
 		"format": "{}",
 		"interval": 1,
 		"exec": "$HOME/.config/waybar/get_media.sh",
-		"on-click": "playerctl -p exaile play-pause"
+		"on-click": "playerctl -p exaile play-pause",
 	},
 	"custom/kbdlayout": {
 		"format": "  {}",
@@ -148,20 +149,20 @@
 		"format-linked": "󰌚 {ifname} (No IP)",
 		"format-disconnected": "󰌙 Disconnected",
 		"format-alt": " {bandwidthDownBytes}  {bandwidthUpBytes}",
-		"tooltip-format": "Interface: {ifname}\nIP: {ipaddr}/{cidr}\nGateway: {gwaddr}\nNetmask: {netmask}"
+		"tooltip-format": "Interface: {ifname}\nIP: {ipaddr}/{cidr}\nGateway: {gwaddr}\nNetmask: {netmask}",
 	},
 	"network#wifi": {
 		"interval": 10,
 		"format-wifi": " {ipaddr}",
 		"format-disconnected": "󰖪 {ifname (No IP)}",
-		"tooltip-format": "Network: {essid}\nSignal strength: {signaldBm}dBm ({signalStrength}%)\nFrequency: {frequency}MHz\nInterface: {ifname}\nIP: {ipaddr}/{cidr}\nGateway: {gwaddr}\nNetmask: {netmask}"
+		"tooltip-format": "Network: {essid}\nSignal strength: {signaldBm}dBm ({signalStrength}%)\nFrequency: {frequency}MHz\nInterface: {ifname}\nIP: {ipaddr}/{cidr}\nGateway: {gwaddr}\nNetmask: {netmask}",
 	},
 	"battery": {
 		"interval": 60,
 		"states": {
 			"good": 95,
 			"warning": 30,
-			"critical": 20
+			"critical": 20,
 		},
 		"format": "{icon} {capacity}%",
 		"format-charging": " {capacity}%",
@@ -182,36 +183,36 @@
 		"format-c": " {percentage}%",
 		"format-alt": "󰾆 {used} GiB",
 		"tooltip": true,
-		"tooltip-format": "󰾆 {percentage}%\n {used:0.1f} GiB / {total:0.1f} GiB\n {swapUsed:0.1f} GiB / {swapAvail:0.1f} GiB"
+		"tooltip-format": "󰾆 {percentage}%\n {used:0.1f} GiB / {total:0.1f} GiB\n {swapUsed:0.1f} GiB / {swapAvail:0.1f} GiB",
 	},
 	"cpu": {
 		"interval": 10,
-		"format": "󰍛 {usage}%"
+		"format": "󰍛 {usage}%",
 	},
 	"disk": {
 		"interval": 5,
 		"format": "󰋊 {percentage_used:}%",
-		"paths": ["/"]
+		"paths": ["/"],
 	},
 	"custom/end-left": {
 		"format": " ",
 		"interval" : "once",
-		"tooltip": false
+		"tooltip": false,
 	},
 	"custom/end-right": {
 		"format": " ",
 		"interval" : "once",
-		"tooltip": false
+		"tooltip": false,
 	},
 	"custom/spacer": {
 		"format": "  ",
 		"interval" : "once",
-		"tooltip": false
+		"tooltip": false,
 	},
 	"custom/separator": {
 		"format": "<span weight='light'>⎟</span>",
 		"interval" : "once",
-		"tooltip": false
+		"tooltip": false,
 	}
 }
 
