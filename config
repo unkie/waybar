@@ -59,6 +59,7 @@
 			"class<(xpdf|com.github.xournalpp.xournalpp)>": "",
 			"class<blender>": "",
 			"title<Windows>": "",
+			"class<org.gnome.DiskUtility>": "󰋊",
 		},
 		"format-window-separator": " ",
 		"show-special": false,
