@@ -114,3 +114,19 @@ tooltip label {
 
 #custom-spacer {
 }
+
+#custom-hyperhdr label.on {
+    color: @text;
+}
+
+#custom-hyperhdr label.off {
+    color: @overlay0;
+}
+
+#custom-hyperhdr label.effect {
+    color: @mauve;
+}
+
+#custom-hyperhdr label.unavailable {
+    color: @red;
+}

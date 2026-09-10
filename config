@@ -13,6 +13,7 @@
 
 	"modules-left": [
 		"custom/spacer",
+		"custom/hyperhdr",
 		"pulseaudio",
 		"custom/separator",
 		"custom/media",
@@ -136,6 +137,17 @@
 		"interval": 1,
 		"exec": "$HOME/.config/waybar/get_kbdlayout.sh",
 		//"on-click": "...",
+	},
+	"custom/hyperhdr": {
+		"format": "{}",
+		"return-type": "json",
+		"interval": 1,
+		"signal": 8,
+		"exec-on-event": false,
+		"exec": "$HOME/.config/waybar/hyperhdr_leds.sh status",
+		"on-click": "$HOME/.config/waybar/hyperhdr_leds.sh toggle",
+		"on-click-right": "$HOME/.config/waybar/hyperhdr_leds.sh effect",
+		"tooltip": true,
 	},
 	"tray": {
 		"icon-size": 18,
